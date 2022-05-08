@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="content_description_app_logo">TOP MOVIES LOGO</string>
+    <string name="ok">OK</string>
+
+    <!--error message-->
+    <string name="no_internet_connectivity">No Internet Connectivity Found!</string>
+    <string name="connection_timeout">Connection Timeout!</string>
+    <string name="force_update_app">Please update app</string>
+    <string name="server_maintenance_message">Server maintenance, please try again later</string>
+    <string name="unknown_error">Something went wrong!, please try again later</string>
+    <string name="content_description_movie_poster">Movie Poster image</string>
+    <string name="error_movie_object">Some issue with movie data!</string>
+    <string name="content_description_back_icon">Back navigation</string>
+    <string name="content_description_back_drop">Back drop poster</string>
+    <string name="movie_duration">%s Minutes</string>
+    <string name="vote_average">%s (IMDB)</string>
+    <string name="release_date">Release Date: %s</string>
+    <string name="overview">Overview</string>
+
+</resources>

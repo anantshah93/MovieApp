@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".activity.MovieDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_blue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:background="@color/dark_blue">
+
+            <ImageView
+                android:id="@+id/imageViewCoverPoster"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:contentDescription="@string/content_description_back_drop"
+                app:layout_constraintDimensionRatio="H,1280:720"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <Space
+                android:id="@+id/space_cover_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1dp"
+                android:layout_marginBottom="@dimen/_30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewCoverPoster" />
+
+            <ImageView
+                android:id="@+id/imageViewPoster"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:contentDescription="@string/content_description_back_drop"
+                android:elevation="@dimen/_10dp"
+                app:layout_constraintDimensionRatio="H,1000:1426"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space_cover_bottom" />
+
+            <TextView
+                android:id="@+id/textViewTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15dp"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewCoverPoster"
+                tools:text="Star Wars: The Last Jedi" />
+
+            <TextView
+                android:id="@+id/textViewTagLine"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:maxLines="2"
+                android:paddingHorizontal="@dimen/_15dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageViewPoster"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTitle"
+                tools:text="The Last Jedi" />
+
+            <View
+                android:id="@+id/border_below_poster"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0.5dp"
+                android:layout_margin="@dimen/_15dp"
+                android:alpha="0.5"
+                android:background="@color/secondary_blue"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewPoster" />
+
+            <TextView
+                android:id="@+id/textViewDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_5dp"
+                android:drawablePadding="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                app:drawableStartCompat="@drawable/ic_clock"
+                app:layout_constraintStart_toStartOf="@+id/border_below_poster"
+                app:layout_constraintTop_toBottomOf="@+id/border_below_poster"
+                tools:text="116 Minutes" />
+
+            <TextView
+                android:id="@+id/textViewIMDB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_15dp"
+                android:drawablePadding="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                app:drawableStartCompat="@drawable/ic_baseline_star_16"
+                app:layout_constraintStart_toEndOf="@+id/textViewDuration"
+                app:layout_constraintTop_toBottomOf="@+id/border_below_poster"
+                app:layout_goneMarginStart="@dimen/_5dp"
+                tools:text="7.0 (IMDB)" />
+
+            <View
+                android:id="@+id/border_below_time_and_rating"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0.5dp"
+                android:layout_margin="@dimen/_15dp"
+                android:alpha="0.5"
+                android:background="@color/secondary_blue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDuration" />
+
+            <TextView
+                android:id="@+id/textViewRelease"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_15dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:drawablePadding="@dimen/_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/border_below_time_and_rating"
+                app:layout_goneMarginStart="0dp"
+                tools:text="Release Date: Feb 28, 1993" />
+
+            <View
+                android:id="@+id/border_below_release_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0.5dp"
+                android:layout_margin="@dimen/_15dp"
+                android:alpha="0.5"
+                android:background="@color/secondary_blue"
+                app:layout_constraintTop_toBottomOf="@+id/textViewRelease" />
+
+            <TextView
+                android:id="@+id/textViewOverviewTile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginTop="@dimen/_15dp"
+                android:text="@string/overview"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/border_below_release_date" />
+
+            <TextView
+                android:id="@+id/textViewOverview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_10dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:paddingEnd="@dimen/_20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOverviewTile"
+                tools:text="Movie overviews" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="@dimen/_35dp"
+        android:layout_height="@dimen/_35dp"
+        android:layout_margin="@dimen/_20dp"
+        android:contentDescription="@string/content_description_back_icon"
+        android:src="@drawable/ic_circle_back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
